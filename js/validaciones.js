@@ -1,8 +1,19 @@
-const inputNacimiento = document.querySelector('#birth');
+// const inputNacimiento = document.querySelector('#birth');
 
-inputNacimiento.addEventListener('blur',(evento) =>{
-    validarNacimiento(evento.target);
-});
+// inputNacimiento.addEventListener('blur',(evento) =>{
+//     validarNacimiento(evento.target);
+// });
+
+export function valida(input) {
+    const tipoDeInput = input.dataset.tipo;
+    if(validadores[tipoDeInput]){
+        validadores[tipoDeInput](input);
+    }
+}
+
+const validadores = {
+    nacimiento: (input) => validarNacimiento(input)
+};
 
 function validarNacimiento(input) {
     const fechaCliente = new Date(input.value);
@@ -10,7 +21,7 @@ function validarNacimiento(input) {
     if (!mayorDeEdad(fechaCliente)) {
         mensaje = 'Debes tener al menos 18 años de edad.';
     }
-    
+    // Funcion el cual nos permitira enviar un mensaje de error personalizado.
     input.setCustomValidity(mensaje);
 }
 
