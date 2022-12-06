@@ -5,7 +5,7 @@
 // });
 
 export function valida(input) {
-    const tipoDeInput = input.dataset.tipo;
+    const tipoDeInput = input.dataset.tipo; // atributo data-"tipo" en nuestro caso
     if(validadores[tipoDeInput]){
         validadores[tipoDeInput](input);
     }
