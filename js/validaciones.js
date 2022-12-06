@@ -29,22 +29,42 @@ const tipoDeErrores = [
 
 const mensajesDeError = {
     nombre: {
-        valueMissing: 'El campo nombre no puede estar vacío.'
+        valueMissing: 'El campo nombre no puede estar vacío.',
     },
 
     email: {
         valueMissing: 'El campo correo no puede estar vacío.',
-        typeMismatch: 'El correo no es válido.'
+        typeMismatch: 'El correo no es válido.',
     },
 
     password: {
         valueMissing: 'El campo contraseña no puede estar vacío.',
-        patternMismatch: 'Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.'
+        patternMismatch: 'Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.',
     },
 
     nacimiento: {
         valueMissing: 'El campo fecha de nacimiento no puede estar vacío.',
-        customError: 'Debes tener al menos 18 años de edad.'
+        customError: 'Debes tener al menos 18 años de edad.',
+    },
+
+    numero: {
+        valueMissing: 'El campo número de teléfono no puede estar vacío.',
+        patternMismatch: 'El formato requerido es XXX-XXX-XXX 9 números',
+    },
+
+    direccion: {
+        valueMissing: 'Este campo no puede estar vacío.',
+        patternMismatch: 'La dirección debe contener entre 10 a 40 caracteres.',
+    },
+
+    ciudad: {
+        valueMissing: 'Este campo no puede estar vacío.',
+        patternMismatch: 'La ciudad debe contener entre 4 a 30 caracteres.',
+    },
+
+    estado: {
+        valueMissing: 'Este campo no puede estar vacío.',
+        patternMismatch: 'El estado debe contener entre 4 a 30 caracteres.',
     }
 };
 
